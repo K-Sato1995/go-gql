@@ -77,7 +77,7 @@ sqlite3 ${DBFILE_NAME} "
 PRAGMA foreign_keys = ON;
 
 INSERT INTO users(id, name) VALUES\
-	('U_1', 'hsaki')
+	('U_1', 'user')
 ;
 
 INSERT INTO repositories(id, owner, name) VALUES\
