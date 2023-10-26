@@ -4,6 +4,12 @@ set -eu
 
 readonly DBFILE_NAME="mygraphql.db"
 
+
+# Delete existing DB file to refresh data
+if [ -e ${DBFILE_NAME} ]; then
+  rm ${DBFILE_NAME}
+fi
+
 # Create DB file
 if [ ! -e ${DBFILE_NAME} ];then
   echo ".open ${DBFILE_NAME}" | sqlite3
