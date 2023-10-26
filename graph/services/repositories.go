@@ -21,7 +21,6 @@ func (r *repoService) GetRepoByFullName(ctx context.Context, owner, name string)
 			db.RepositoryColumns.Owner,
 			db.RepositoryColumns.CreatedAt,
 		),
-		db.RepositoryWhere.Owner.EQ(owner),
 		db.RepositoryWhere.Name.EQ(name),
 	).One(ctx, r.exec)
 	if err != nil {
